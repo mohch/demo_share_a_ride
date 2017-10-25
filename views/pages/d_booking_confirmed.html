@@ -1,0 +1,46 @@
+<div class="app flex-row align-items-center">
+    <div class="container-fluid" ng-if="window1">
+        <div class="row justify-content-center">
+            <div class="col-sm-12">
+            <span us-spinner="{radius:30, width:8, length: 16}" spinner-on="showSpinner">
+                <ng-map default-style="false" on-resize="resizefun()" center="{{mapcenterlat}}, {{mapcenterlong}}" zoom="{{mapzoom}}" style="height: 50vh; width: 100%">
+                    <marker position="{{user.coordinates}}" icon="{url:'/img/maps/1.png'}" ng-repeat="user in user_data">
+                    </marker>
+                </ng-map>
+                </span>
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-sm-12">
+        <table st-table="displayedCollection" st-safe-src="user_data" class="table table-striped">
+            <thead>
+            <tr>
+                <th>Contact</th>
+                <th>Name</th>
+                <th>Gate</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="row in displayedCollection">
+                <td>{{row.number}}</td>
+                <td>{{row.commuter_name}}</td>
+                <td>{{row.gate}}</td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+            <button class="btn-primary px-4" style="margin-top: 5px;">Cancel</button><button ng-click="leavenow()" class="btn-primary px-4" style="margin-top: 5px; margin-left: 5px;">Leave Now</button>
+            </div>
+        </div>
+    </div>
+    <div ng-if="!window1">
+    <div class="row justify-content-center">
+        <div class="col-sm-12">
+        <h6>You are on your way!</h6>
+        </div>
+    </div>
+    </div>
+</div>

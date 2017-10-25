@@ -1,0 +1,35 @@
+<div class="app flex-row align-items-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card-group mb-0">
+          <div class="card p-4">
+            <img class="img-responsive" src="../img/reliance_logo.png" alt="" style="max-width:70%;margin: 0 auto">
+            <div class="card-block">
+              <h6 class="text-muted">Welcome User</h6>
+              <form ng-submit="login()">
+                <div class="input-group mb-3">
+                  <span class="input-group-addon"><i class="icon-user"></i>
+                  </span>
+                  <input type="text" class="form-control" placeholder="Email" ng-model="user.employee_id" required>
+                </div>
+                <span style="color:red" ng-if="wrongInput">
+                  <span>All fields are required.</span>
+                </span>
+                <span style="color:red" ng-if="incorrectDetails">
+                  <span>Please check if you have entered correct credentials.</span>
+                </span>
+                <div class="row">
+                  <div class="col-6">
+                    <button class="btn btn-primary px-4">Log in</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

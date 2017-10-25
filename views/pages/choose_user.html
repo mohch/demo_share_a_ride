@@ -1,0 +1,30 @@
+<div class="app flex-row align-items-center">
+  <div class="container" >
+    <h6>Hi! {{employee_name}}</h6>
+    <div class="row justify-content-center">
+      <div ng-if="main_window">
+      <div class="col-md-2"> </div>
+      <div class="col-md-4">
+      <div style="text-align: center; margin-bottom: 50px;">
+      <img class="img-responsive" src="../img/ship.png" alt="" style="margin: 0 auto" ng-click="select_driver()">
+      <h4>Share your ride</h4>
+      </div>
+      </div>
+      <div class="col-md-4">
+      <div style="text-align: center; ">
+      <img class="img-responsive" src="../img/networking.png" alt="" style="margin: 0 auto" ng-click="select_commuter()">
+      <h4>Book a Ride</h4>
+      </div>
+      </div>
+      <div class="col-md-2"> </div>
+      </div>
+      <div ng-if = "!main_window">
+      <div class="col-sm-12">
+      Available seats : <input type="text" class="form-control" placeholder="Available Seats" ng-model="user.seats" required>
+      <button ng-click="shareride()" class="btn-primary px-4" style="margin-top: 5px;">Send</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,20 @@
+<div class="app flex-row align-items-center">
+  <div class="container-fluid">
+    <span us-spinner="{radius:30, width:8, length: 16}" spinner-on="showSpinner">
+    <div class="row justify-content-center">
+    <div class="col-sm-12">
+      <h6>{{gatename}}</h6>
+      <ng-map default-style="false" on-resize="resizefun()" center="{{mapcenterlat}}, {{mapcenterlong}}" zoom="{{mapzoom}}" style="height: 50vh; width: 100%">
+        <marker id='x' position="{{gate.coordinates}}"
+        on-click="toggleBounce(gate)"
+        ng-repeat="gate in gates_data"
+        on-click="">
+      </marker>
+    </ng-map>
+    <button ng-click="book_my_ride()" class="btn-primary px-4" style="margin-top: 5px;">Get my Cab</button>
+    </div>
+    </div>
+    </span>
+  </div>
+</div>
+

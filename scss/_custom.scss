@@ -1,0 +1,56 @@
+// Here you can add other styles
+.logo {
+  padding: 0.5rem 8rem !important;
+  background-size: 150px auto !important;
+}
+
+.profile-head {
+  background-color: white;
+  padding: 20px;
+}
+
+.tracking-map-container {
+  height: 300px;
+  min-height: 300px;
+}
+
+.red-line{
+width: 500px;
+border-bottom: 2px solid red;
+position: absolute;
+}
+.green-line{
+width: 500px;
+border-bottom: 2px solid green;
+position: absolute;
+}
+.start-text {
+  text-align: left;
+  float: left;
+}
+
+.end-text {
+  text-align: right;
+  float: right;
+}
+
+.red-tint {
+  background-color: #FFE5E5;
+}
+
+.green-tint {
+  background-color: #B2D6C4;
+}
+
+.tracking-list {
+  overflow-y: scroll;
+  height: 75vh;
+}
+
+.map-container {
+  height: 75vh;
+}
+
+.trip-map-gmap {
+  height: 75vh;
+}
