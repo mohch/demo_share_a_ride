@@ -1,0 +1,36 @@
+<div class="app flex-row align-items-center">
+
+  <div class="container-fluid">
+    <div class="row">
+       <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12" id="google_map">
+        <ng-map default-style="false" on-resize="resizefun()" center="{{mapcenterlat}}, {{mapcenterlong}}" zoom="{{mapzoom}}" style="height: 50vh; width: 100%">
+            <marker position="19.126614, 73.004805" icon="{url:'/img/maps/sedan.png'}" on-click=""></marker>
+            <marker position="19.112665, 72.862326" icon="{url:'/img/maps/flag.png'}" on-click=""></marker>
+        </ng-map>
+       </div>
+       <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12" id="info">
+         <div ng-if="leave_now">
+            <h6>Driver is on his way to pick you up</h6>
+         </div>
+         <div id="profile_info" class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+           <span id="data">Name : Mohit Chaurasia</span>
+           <span id="data">Mobile No : 9029555247</span>
+           <span id="data">Vehicle No : MH 01 LJ 98389</span>
+         </div>
+       </div>
+      </div>
+    </div>
+    
+     <div class="btn-group btn-group-justified">
+      <a href="#" class="btn btn-primary btn-no-left-radius" data-toggle="tooltip" title="Cancel">
+        <span class="glyphicon glyphicon-remove"></span>
+      </a>
+      <a href="#" class="btn btn-primary" data-toggle="tooltip" title="Call">
+        <span class="glyphicon glyphicon-earphone"></span>
+      </a>
+      <a href="#" class="btn btn-primary btn-no-right-radius" data-toggle="tooltip" title="SOS">
+        <span class="glyphicon glyphicon-warning-sign"></span>
+      </a>
+   </div>
+
+</div>
